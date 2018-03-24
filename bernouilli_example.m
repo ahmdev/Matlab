@@ -1,7 +1,5 @@
-it = 1000;
-x(1) = rand();
-for i = 2:it
-  x(i) = bernouilli(x(i-1));
+xn_1 = 0:0.001:1;
+for i = 1:length(xn_1)
+  xn(i) = bernouilli_map(xn_1(i));
 end
-
-plot(x,'.');
+plot(xn_1,xn,'.');
